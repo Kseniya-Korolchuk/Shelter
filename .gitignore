@@ -108,3 +108,4 @@ dist
 
 # TernJS port file
 .tern-port
+pages/main/css/mixins.css
