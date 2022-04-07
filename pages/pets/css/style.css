@@ -302,11 +302,11 @@ button {
   border-radius: 100px;
   color: #292929;
   background: none;
-  text-align: center;
   font-family: "Georgia", serif;
   font-size: 20px;
   line-height: 115%;
   letter-spacing: 0.06em;
+  padding-bottom: 4px;
 }
 .button-arrow.disabled {
   cursor: auto;
