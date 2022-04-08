@@ -382,13 +382,15 @@ h1, h2, h3, h4, h5 {
   background-color: #FDDCC4;
   border-color: #FDDCC4;
 }
-.button-arrow.disabled {
+
+.disabled {
   color: #CDCDCD;
   border-color: #CDCDCD;
   cursor: auto;
 }
-.button-arrow.disabled:hover {
+.disabled:hover {
   background: none;
+  border-color: #CDCDCD;
 }
 
 .slider__cards {
