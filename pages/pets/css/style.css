@@ -166,6 +166,7 @@ button {
   font-size: 15px;
   line-height: 160%;
   display: block;
+  position: relative;
   font-family: "Arial", sans-serif;
   color: #545454;
   border-bottom: 3px solid rgba(241, 205, 179, 0);
@@ -173,9 +174,16 @@ button {
 .nav__link:hover {
   color: #292929;
 }
-.nav__link.active {
-  color: #545454;
-  border-bottom: 3px solid #F1CDB3;
+.nav__link.active::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  content: "";
+  left: 0;
+  top: 24px;
+  color: #FAFAFA;
+  border-top: 3px solid #F1CDB3;
 }
 
 .main {
@@ -310,6 +318,14 @@ button {
 }
 .button-arrow:hover {
   border-color: #FDDCC4;
+  border-color: #FDDCC4;
+  background-color: #FDDCC4;
+}
+.button-arrow.active {
+  background-color: #F1CDB3;
+}
+.button-arrow.active:hover {
+  border-color: #FDDCC4;
   background-color: #FDDCC4;
 }
 
@@ -321,10 +337,6 @@ button {
 .disabled:hover {
   border-color: #CDCDCD;
   background: none;
-}
-
-.active {
-  background-color: #F1CDB3;
 }
 
 .footer {
