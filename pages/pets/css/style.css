@@ -316,17 +316,9 @@ button {
   letter-spacing: 0.06em;
   padding-bottom: 4px;
 }
-.button-arrow:hover {
-  border-color: #FDDCC4;
-  border-color: #FDDCC4;
-  background-color: #FDDCC4;
-}
 .button-arrow.active {
   background-color: #F1CDB3;
-}
-.button-arrow.active:hover {
-  border-color: #FDDCC4;
-  background-color: #FDDCC4;
+  cursor: auto;
 }
 
 .disabled {
@@ -334,9 +326,11 @@ button {
   color: #CDCDCD;
   border-color: #CDCDCD;
 }
-.disabled:hover {
-  border-color: #CDCDCD;
-  background: none;
+
+.enabled:hover {
+  border-color: #FDDCC4;
+  border-color: #FDDCC4;
+  background-color: #FDDCC4;
 }
 
 .footer {
