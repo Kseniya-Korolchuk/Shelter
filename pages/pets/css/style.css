@@ -170,6 +170,8 @@ button {
   font-family: "Arial", sans-serif;
   color: #545454;
   border-bottom: 3px solid rgba(241, 205, 179, 0);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .nav__link:hover {
   color: #292929;
@@ -250,10 +252,14 @@ button {
   padding-bottom: 30px;
   border-radius: 9px;
   background-color: #FAFAFA;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 .card:hover {
   cursor: pointer;
   background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 .card:hover button {
   background-color: #FDDCC4;
@@ -315,6 +321,8 @@ button {
   line-height: 115%;
   letter-spacing: 0.06em;
   padding-bottom: 4px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 .button-arrow:hover {
   border-color: #FDDCC4;
