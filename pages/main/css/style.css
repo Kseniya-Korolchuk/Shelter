@@ -526,6 +526,11 @@ h1, h2, h3, h4, h5 {
   background-color: #FDDCC4;
   border-color: #FDDCC4;
 }
+@media (max-width: 768px) {
+  .card:nth-child(3) {
+    display: none;
+  }
+}
 
 .img__pet-card {
   border-top-left-radius: 9px;
