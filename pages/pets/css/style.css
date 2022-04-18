@@ -354,7 +354,7 @@ button {
   letter-spacing: 0.06em;
   font-weight: normal;
 }
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .h3 {
     font-family: "Georgia", serif;
     font-size: 25px;
@@ -536,7 +536,7 @@ button {
   background-image: url(../../../assets/images/bg/footer-gradient-background.jpg);
   background-size: cover;
 }
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
   .footer {
     padding-top: 32px;
     background-image: url(../../../assets/images/bg/tablet/footer-gradient-background.png);
@@ -560,15 +560,17 @@ button {
       flex-wrap: wrap;
   gap: 159px;
   row-gap: 60px;
+  margin: 0 auto;
 }
-@media (max-width: 899px) {
+@media (max-width: 1024px) {
   .footer__content {
     gap: 60px;
     row-gap: 64px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .footer__content {
+    max-width: 300px;
     gap: 40px;
   }
 }
@@ -600,7 +602,7 @@ button {
   font-weight: normal;
   color: #FFFFFF;
 }
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .h3__footer {
     font-family: "Georgia", serif;
     font-size: 25px;
@@ -612,6 +614,7 @@ button {
 
 @media (max-width: 480px) {
   .h3__footer__contacts {
+    line-height: 120%;
     width: 278px;
   }
 }
