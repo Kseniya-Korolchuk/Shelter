@@ -37,6 +37,30 @@ html, body {
   /*overflow-x: hidden;*/
 }
 
+body.locked {
+  overflow-y: hidden;
+  -webkit-box-shadow: inset 500px 0px 5px 0px rgba(41, 41, 41, 0.6);
+          box-shadow: inset 500px 0px 5px 0px rgba(41, 41, 41, 0.6);
+}
+
+.blackout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+  background-color: rgba(41, 41, 41, 0.6);
+  opacity: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  display: none;
+}
+.blackout.active {
+  display: block;
+}
+
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
@@ -122,6 +146,9 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 60px;
+}
+.logo.logo-hidden {
+  visibility: hidden;
 }
 
 .logo__cozy-house {
@@ -237,7 +264,7 @@ button {
 .nav__burger span::after {
   top: 10px;
 }
-.nav__burger:focus {
+.nav__burger.active {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -250,7 +277,7 @@ button {
 .nav__menu {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -320px;
   z-index: 30;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -259,11 +286,15 @@ button {
   width: 320px;
   height: 100%;
   background: #FFFFFF;
-  display: none;
+  overflow-y: auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
-@media (max-width: 766px) {
+@media (max-width: 767px) {
   .nav__menu.active {
     display: block;
+    top: 0;
+    right: 0;
   }
 }
 

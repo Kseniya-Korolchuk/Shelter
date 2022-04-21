@@ -33,8 +33,31 @@ html, body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
   /*overflow-x: hidden;*/
+}
+
+body.locked {
+  overflow-y: hidden;
+  -webkit-box-shadow: inset 500px 0px 5px 0px rgba(41, 41, 41, 0.6);
+          box-shadow: inset 500px 0px 5px 0px rgba(41, 41, 41, 0.6);
+}
+
+.blackout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+  background-color: rgba(41, 41, 41, 0.6);
+  opacity: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  display: none;
+}
+.blackout.active {
+  display: block;
 }
 
 a {
@@ -138,9 +161,11 @@ h1, h2, h3, h4, h5 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 60px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .logo.logo-hidden {
-  visibility: hidden;
+  opacity: 0;
 }
 
 .logo__cozy-house {
@@ -256,7 +281,7 @@ h1, h2, h3, h4, h5 {
 .nav__burger span::after {
   top: 10px;
 }
-.nav__burger:focus {
+.nav__burger.active {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -269,7 +294,7 @@ h1, h2, h3, h4, h5 {
 .nav__menu {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -320px;
   z-index: 30;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -278,11 +303,23 @@ h1, h2, h3, h4, h5 {
   width: 320px;
   height: 100%;
   background: #292929;
-  display: none;
+  overflow-y: auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.nav__menu .logo {
+  opacity: 0;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 @media (max-width: 767px) {
   .nav__menu.active {
     display: block;
+    top: 0;
+    right: 0;
+  }
+  .nav__menu.active .logo {
+    opacity: 100%;
   }
 }
 
