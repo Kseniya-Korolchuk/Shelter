@@ -367,7 +367,7 @@ button {
   margin: 0 auto;
   text-align: center;
 }
-@media (max-width: 899px) {
+@media (max-width: 1279px) {
   .content__our-pets {
     grid-template-rows: 105px auto 77px;
   }
@@ -406,14 +406,12 @@ button {
   grid-template-rows: repeat(2, 1fr);
   gap: 30px 40px;
   padding: 15px 0;
+  /*@media (max-width: 1279px) {
+      grid-template-columns: repeat(3, 1fr); 
+      grid-template-rows: repeat(2, 1fr);
+  }*/
 }
 @media (max-width: 1279px) {
-  .pets-card-container {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-}
-@media (max-width: 899px) {
   .pets-card-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);

@@ -23,6 +23,120 @@
   font-weight: 400;
   font-style: italic;
 }
+.shadow {
+  width: 100%;
+  height: 100%;
+  background: rgba(41, 41, 41, 0.6);
+}
+
+.card-block {
+  position: relative;
+  top: 136px;
+  left: 150px;
+  width: 952px;
+  height: 552px;
+  border: 1px solid transparent;
+}
+
+.button-arrow__close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.button-arrow {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  color: #4C4C4C;
+  background: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.pet-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 52px 52px 0 0;
+  background-color: #fff;
+  border-radius: 9px;
+}
+
+.pet-card__img {
+  width: 500px;
+  height: 500px;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+
+.pet-card__dossier {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 351px;
+  height: 362px;
+  margin: 50px 20px 88px 29px;
+  font-family: "Georgia", serif;
+}
+
+.pet-card__dossier-top {
+  margin-bottom: 25px;
+}
+
+.pet-card__dossier-middle {
+  margin-bottom: 27px;
+}
+
+.pet-card__pet-name {
+  font-family: "Georgia", serif;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.pet-card__pet-type-and-breed {
+  font-family: "Georgia", serif;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  letter-spacing: 0em;
+}
+
+.pet-card__pet-description {
+  width: 350px;
+  font-family: "Georgia", serif;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+.pet-card__list-info {
+  margin-left: 15px;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+.pet-card__list-info li {
+  color: #F1CDB3;
+  list-style: disc;
+  margin-bottom: 12px;
+}
+.pet-card__list-info li span {
+  color: #292929;
+}
+.pet-card__list-info li span.bold-text {
+  font-weight: 700;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
