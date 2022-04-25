@@ -1,5 +1,6 @@
-import pets from '../json/pets.json' assert { type: 'json' }
 import createPetCard from './createPetCard.js';
+import pets from '../json/pets.json' assert { type: 'json' };
+
 
 const sliderCards = document.querySelector('.slider__cards');
 const buttonLeft = document.querySelector('.slider__button-left');
@@ -16,48 +17,46 @@ pets.forEach((pet) => {
     pet.inoculations,
     pet.diseases,
     pet.parasites,
-    'card'
-  )
+    'slider__item'
+  );
 
   sliderCards.insertAdjacentHTML('beforeend', petCard);
 })
 
-function findNamesFirstThreeElements() {
-  return [
-    ...sliderCards.querySelectorAll('.slider__cards > :not(:nth-child(n+4))'),
-  ].map((el) => el.querySelector('.card').dataset.name);
+const showPrevious = (event) => {
+  checkDuplicates();
+  sliderCards.classList.add('previous');
+  setTimeout(() => sliderCards.classList.remove('previous'), 800);
 }
 
-let namesFirstThreeElements = findNamesFirstThreeElements();
+const showNext = (event) => {
+  checkDuplicates();
+  sliderCards.classList.add('next');
+  setTimeout(() => sliderCards.classList.remove('next'), 800);
+}
 
-function checkForDuplicates() {
+buttonLeft.addEventListener('click', showPrevious);
+buttonRight.addEventListener('click', showNext);
+
+function getFirstNames() {
+  return [...sliderCards.querySelectorAll('.slider__cards > :not(:nth-child(n+4))')].map((el) => el.querySelector('.card').dataset.name);
+}
+
+let firstNames = getFirstNames();
+
+function checkDuplicates() {
   for (let i = sliderCards.children.length; i >= 0; i--) {
     sliderCards.append(sliderCards.children[(Math.random() * i) | 0]);
   }
 
-  const sliderItems = [...sliderCards.children]
+  const sliderItems = [...sliderCards.children];
 
-  for (let i = 0; i < namesFirstThreeElements.length; i++) {
+  for (let i = 0; i < firstNames.length; i++) {
     let item = sliderItems[i].querySelector('.card');
-    if (namesFirstThreeElements.slice(0, 3).includes(item.dataset.name)) {
-      return checkForDuplicates();
+    if (firstNames.slice(0, 3).includes(item.dataset.name)) {
+      return checkDuplicates();
     }
   }
 
-  namesFirstThreeElements = findNamesFirstThreeElements();
+  firstNames = getFirstNames();
 }
-
-const handlePrev = (event) => {
-  checkForDuplicates();
-  sliderCards.classList.add('prev');
-  setTimeout(() => sliderCards.classList.remove('prev'), 300);
-}
-
-const handleNext = (event) => {
-  checkForDuplicates();
-  sliderCards.classList.add('next');
-  setTimeout(() => sliderCards.classList.remove('next'), 300);
-}
-
-buttonLeft.addEventListener('click', handlePrev);
-buttonRight.addEventListener('click', handleNext);
