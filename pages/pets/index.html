@@ -7,7 +7,8 @@
     <title>Shelter</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body style>
+    <iframe name="frame" width=100% style="position:absolute; z-index:-1; border: transparent;"></iframe>
     <div class="wrapper">
         <header class="header">
             <div class="container">
@@ -37,7 +38,7 @@
                         </div>
                         <ul class="nav__burger-list">
                             <li class="nav__burger-item"><a href="#about" class="nav__link nav__burger-link active">About the shelter</a></li> 
-                            <li class="nav__burger-item"><a href="../pets/index.html" class="nav__link nav__burger-link">Our pets</a></li>
+                            <li class="nav__burger-item"><a href="javascript:void(0);" class="nav__link nav__burger-link">Our pets</a></li>
                             <li class="nav__burger-item"><a href="../main/index.html#help" class="nav__link nav__burger-link">Help the shelter</a></li>
                             <li class="nav__burger-item"><a href="#contacts" class="nav__link nav__burger-link">Contacts</a></li>
                         </ul>
@@ -50,54 +51,13 @@
                 <div class="container">
                     <div class="content__our-pets">
                         <h3 class="h3 h3__our-pets">Our friends who<br>are looking for a house</h3>
-                        <div class="pets-card-container">
-                            <div class="card">
-                                <img src="../../assets/images/pets/pets-katrine.jpg" alt="pets-katrine" class="img__pet-card">
-                                <p class="pet-name">Katrine</p>
-                                <button class="button button-primary button-secondary">Learn more</button>
-                            </div>
-                            <div class="card">
-                                <img src="../../assets/images/pets/pets-jennifer.jpg" alt="pets-jennifer" class="img__pet-card">
-                                <p class="pet-name">Jennifer</p>
-                                <button class="button button-primary button-secondary">Learn more</button>
-                            </div>
-                            <div class="card">
-                                <img src="../../assets/images/pets/pets-woody.jpg" alt="pets-woody" class="img__pet-card">
-                                <p class="pet-name">Woody</p>
-                                <button class="button button-primary button-secondary">Learn more</button>
-                            </div>
-                            <div class="card">
-                                <img src="../../assets/images/pets/pets-sophia.jpg" alt="pets-sophia" class="img__pet-card">
-                                <p class="pet-name">Sophia</p>
-                                <button class="button button-primary button-secondary">Learn more</button>
-                            </div>
-                            <div class="card">
-                                <img src="../../assets/images/pets/pets-timmy.jpg" alt="pets-timmy" class="img__pet-card">
-                                <p class="pet-name">Timmy</p>
-                                <button class="button button-primary button-secondary">Learn more</button>
-                            </div>
-                            <div class="card">
-                                <img src="../../assets/images/pets/pets-charly.jpg" alt="pets-charly" class="img__pet-card">
-                                <p class="pet-name">Charly</p>
-                                <button class="button button-primary button-secondary">Learn more</button>
-                            </div>
-                            <div class="card">
-                                <img src="../../assets/images/pets/pets-scarlet.jpg" alt="pets-scarlett" class="img__pet-card">
-                                <p class="pet-name">Scarlett</p>
-                                <button class="button button-primary button-secondary">Learn more</button>
-                            </div>
-                            <div class="card">
-                                <img src="../../assets/images/pets/pets-freddie.jpg" alt="pets-freddie" class="img__pet-card">
-                                <p class="pet-name">Freddie</p>
-                                <button class="button button-primary button-secondary">Learn more</button>
-                            </div>
-                        </div>
+                        <div class="pets-card-container"></div>
                         <div class="pets-container__navigation-container">
-                            <button class="button-arrow disabled">&#60;&#60;</button>
-                            <button class="button-arrow disabled">&#60;</button>
-                            <button class="button-arrow active">1</button>
-                            <button class="button-arrow enabled">&#62;</button>
-                            <button class="button-arrow enabled">&#62;&#62;</button>
+                            <button class="button-arrow disabled" id="first">&#60;&#60;</button>
+                            <button class="button-arrow disabled" id="prev">&#60;</button>
+                            <button class="button-arrow active" id="page">1</button>
+                            <button class="button-arrow enabled"  aria-disabled = "false" id="next">&#62;</button>
+                            <button class="button-arrow enabled" aria-disabled = "false" id="last">&#62;&#62;</button>
                         </div>
                     </div>
                 </div>
@@ -141,6 +101,15 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript">
+            setTimeout( function() {
+                    frame.onresize = function(){
+                    location.reload();
+                 }
+            },1000);
+    </script>
     <script type="module" src="../../assets/js/script.js"></script>
+    <script type="module" src="../../assets/js/popup.js"></script>
+    <script type="module" src="../../assets/js/paginator.js"></script>
 </body>
 </html>

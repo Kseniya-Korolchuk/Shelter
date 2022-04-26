@@ -21,7 +21,7 @@ pets.forEach((pet) => {
   );
 
   sliderCards.insertAdjacentHTML('beforeend', petCard);
-})
+});
 
 const showPrevious = (event) => {
   checkDuplicates();

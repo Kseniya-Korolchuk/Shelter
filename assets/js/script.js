@@ -3,4 +3,3 @@ import menuLinks from './menuLinks.js';
 
 burgerMenu();
 menuLinks();
-

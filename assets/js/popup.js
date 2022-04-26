@@ -1,4 +1,4 @@
-class Popup {
+export default class Popup {
     popups = document.querySelectorAll('#popup');
     cards = document.querySelectorAll('.card');
     popupBtnsClose = document.querySelectorAll('.popup__button-close');
@@ -8,12 +8,14 @@ class Popup {
     }
   
     showPopup() {
+
       [].forEach.call(this.cards, function (btn) {
         btn.addEventListener('click', function (event) {
           event.currentTarget.lastElementChild.showModal();
           document.body.style.overflow = 'hidden';
         });
       });
+
       [].forEach.call(this.popups, function (popup) {
         popup.addEventListener('click', (event) => {
           event.stopPropagation();
@@ -23,6 +25,7 @@ class Popup {
           }
         });
       });
+
       [].forEach.call(this.popupBtnsClose, function (popupBtnClose) {
         popupBtnClose.addEventListener('click', (event) => {
           event.stopPropagation();
@@ -32,4 +35,5 @@ class Popup {
       });
     }
   }
+  
   new Popup();
