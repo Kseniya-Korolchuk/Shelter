@@ -107,7 +107,9 @@ buttonFirst.addEventListener('click', function(event) {
     petsCardContainer.replaceChildren(...template.children);
     buttonPage.textContent = count;
     changeClass(buttonFirst, 'enabled', 'disabled');
+    buttonFirst.setAttribute('disabled', 'disabled');
     changeClass(buttonPrev, 'enabled', 'disabled');
+    buttonPrev.setAttribute('disabled', 'disabled');
     new Popup();
     }
 });
