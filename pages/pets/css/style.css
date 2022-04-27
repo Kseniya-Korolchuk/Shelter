@@ -56,6 +56,12 @@
   gap: 30px;
   border-radius: 9px;
 }
+.popup__wrapper:hover button.button-arrow {
+  background: transparent;
+}
+.popup__wrapper button.button-arrow:hover {
+  background: #FDDCC4;
+}
 .popup__wrapper div {
   display: -webkit-box;
   display: -ms-flexbox;
