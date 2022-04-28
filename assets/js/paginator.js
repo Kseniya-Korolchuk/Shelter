@@ -106,6 +106,8 @@ buttonFirst.addEventListener('click', function(event) {
     template.insertAdjacentHTML('beforeend', [...html].join(''));
     petsCardContainer.replaceChildren(...template.children);
     buttonPage.textContent = count;
+    changeClass(buttonNext, 'disabled', 'enabled');
+    changeClass(buttonLast, 'disabled', 'enabled');
     changeClass(buttonFirst, 'enabled', 'disabled');
     buttonFirst.setAttribute('disabled', 'disabled');
     changeClass(buttonPrev, 'enabled', 'disabled');
