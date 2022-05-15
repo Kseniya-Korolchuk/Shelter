@@ -1,7 +1,6 @@
 import createPetCard from './createPetCard.js';
-import pets from '../json/pets.json' assert { type: 'json' };
 
-
+const pets = await fetch('../../assets/json/pets.json').then(response => response.json());
 const sliderCards = document.querySelector('.slider__cards');
 const buttonLeft = document.querySelector('.slider__button-left');
 const buttonRight = document.querySelector('.slider__button-right');
