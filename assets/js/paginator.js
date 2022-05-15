@@ -1,6 +1,6 @@
 import createPetCard from './createPetCard.js';
 import Popup from './popup.js';
-import pets from '../json/pets.json' assert { type: 'json' };
+import data from './data.js';
 
 const petsCardContainer = document.querySelector('.pets-card-container');
 const buttonFirst = document.getElementById('first');
@@ -8,6 +8,7 @@ const buttonPrev = document.getElementById('prev');
 const buttonPage = document.getElementById('page');
 const buttonNext = document.getElementById('next');
 const buttonLast = document.getElementById('last');
+const pets = data;
 
 let petCards = [];
 

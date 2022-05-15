@@ -7,7 +7,7 @@ const createPetCard = (img, name, type, breed, description, age, inoculations, d
           <button class="button button-primary button-secondary">Learn more</button>
           <dialog id="popup" class="popup">
             <div class="popup__wrapper">
-            <button class="button button-arrow popup__button-close">&#10006;</button>
+              <button class="button button-arrow popup__button-close">&#10006;</button>
               <img src=${img} alt="pets-${name.toLowerCase()} ">
               <div>
                 <h3 class="popup__name">${name}</h3>

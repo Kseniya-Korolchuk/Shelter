@@ -1,10 +1,10 @@
 import createPetCard from './createPetCard.js';
+/*import data from './data.js';*/
 import pets from '../json/pets.json' assert { type: 'json' };
-
-
 const sliderCards = document.querySelector('.slider__cards');
 const buttonLeft = document.querySelector('.slider__button-left');
 const buttonRight = document.querySelector('.slider__button-right');
+/*const pets = data;*/
 
 pets.forEach((pet) => {
   const petCard = createPetCard(
